@@ -1,7 +1,5 @@
 import datetime
 
-import self as self
-
 
 class Book:
     publisher = "издательство АБВ"
