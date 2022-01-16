@@ -5,10 +5,10 @@ class Book:
     publisher = "издательство АБВ"
     __year = datetime.datetime.now().year
     coverType = "твердый"
-    id = 0
+    __id = 0
 
     def __init__(self, name, author, number_of_pages):
-        Book.id += 1
+        Book.__id += 1
         self.name = name
         self.author = author
         self.number_of_pages = number_of_pages
@@ -40,7 +40,7 @@ class Book:
 
     def show_book_info(self):
         print(f"Автор книги: {self.author}, название книги: {self.name}, год издания: {self.get_year()}, "
-              f"издательство: {self.get_publisher()}, переплет: {self.coverType}, цена: {self.price}, страниц: {self.number_of_pages}, id номер: {self.id} ")
+              f"издательство: {self.get_publisher()}, переплет: {self.coverType}, цена: {self.price}, страниц: {self.number_of_pages}, id номер: {self.__id} ")
 
 
 book1 = Book("Война и мир", "Толстой", 1225)
