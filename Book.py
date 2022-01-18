@@ -1,14 +1,14 @@
 import datetime
-
+import itertools
 
 class Book:
     publisher = "издательство АБВ"
     __year = datetime.datetime.now().year
     coverType = "твердый"
-    __id = 0
+    __id = itertools.count()
 
     def __init__(self, name, author, number_of_pages):
-        Book.__id += 1
+        self.__id = next(Book.__id)
         self.name = name
         self.author = author
         self.number_of_pages = number_of_pages
@@ -16,7 +16,7 @@ class Book:
 
 
     def get_id(self):
-        return self.id
+        return self.__id
 
     def get_year(self):
         return self.__year
