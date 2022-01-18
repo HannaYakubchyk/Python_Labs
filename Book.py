@@ -5,7 +5,7 @@ class Book:
     publisher = "издательство АБВ"
     __year = datetime.datetime.now().year
     coverType = "твердый"
-    __id = itertools.count()
+    __id = itertools.count(1,1)
 
     def __init__(self, name, author, number_of_pages):
         self.__id = next(Book.__id)
