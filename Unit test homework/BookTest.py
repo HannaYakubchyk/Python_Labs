@@ -1,8 +1,4 @@
 import unittest
-from unittest import TestCase
-
-import self
-
 import Book
 
 
